@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Feature Comparison Matrix</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans antialiased">
+    <div class="min-h-screen p-6">
+        <div class="max-w-7xl mx-auto py-12">
+            <div class="text-center mb-12">
+                <h1 class="text-5xl font-extrabold text-gray-900 leading-tight mb-4">Compare Features</h1>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Find the perfect plan that fits your needs. Detailed breakdown of features across all our tiers.</p>
+            </div>
+
+            <div class="overflow-x-auto bg-white rounded-xl shadow-lg">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-100 sticky-header">
+                        <tr>
+                            <th scope="col" class="px-6 py-4 text-left text-sm font-medium text-gray-700 uppercase tracking-wider w-1/4">Feature</th>
+                            <th scope="col" class="px-6 py-4 text-center text-sm font-medium text-gray-700 uppercase tracking-wider w-1/4">Basic</th>
+                            <th scope="col" class="px-6 py-4 text-center text-sm font-medium text-gray-700 uppercase tracking-wider w-1/4">Pro</th>
+                            <th scope="col" class="px-6 py-4 text-center text-sm font-medium text-gray-700 uppercase tracking-wider w-1/4">Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <!-- Feature Row 1 -->
+                        <tr x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false" :class="{ 'bg-blue-50': hover, 'transition-colors duration-200': true }">
+                            <td class="px-6 py-4 whitespace-nowrap text-lg font-medium text-gray-900 flex items-center">
+                                API Requests
+                                <div x-data="{ tooltip: false }" class="relative ml-2">
+                                    <button type="button" class="h-5 w-5 text-gray-400 cursor-pointer"
+                                            @mouseenter="tooltip = true" @mouseleave="tooltip = false"
+                                            @focus="tooltip = true" @blur="tooltip = false"
+                                            :aria-expanded="tooltip ? 'true' : 'false'" aria-controls="tooltip-api-requests"
+                                            aria-label="More information about API Requests">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    </button>
+                                    <div x-show="tooltip" id="tooltip-api-requests" role="tooltip" aria-live="polite" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1" class="absolute z-10 w-64 px-3 py-2 text-sm font-medium text-white bg-gray-800 rounded-lg shadow-sm -mt-10 left-1/2 -translate-x-1/2" x-cloak>
+                                        Number of calls your application can make to our servers per month.
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center text-gray-700 text-lg">10,000</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center text-gray-700 text-lg">100,000</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center text-gray-700 text-lg">Unlimited</td>
+                        </tr>
+
+                        <!-- Feature Row 2 -->
+                        <tr x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false" :class="{ 'bg-blue-50': hover, 'transition-colors duration-200': true }">
+                            <td class="px-6 py-4 whitespace-nowrap text-lg font-medium text-gray-900 flex items-center">
+                                Data Storage
+                                <div x-data="{ tooltip: false }" class="relative ml-2">
+                                    <button type="button" class="h-5 w-5 text-gray-400 cursor-pointer"
+                                            @mouseenter="tooltip = true" @mouseleave="tooltip = false"
+                                            @focus="tooltip = true" @blur="tooltip = false"
+                                            :aria-expanded="tooltip ? 'true' : 'false'" aria-controls="tooltip-data-storage"
+                                            aria-label="More information about Data Storage">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    </button>
+                                    <div x-show="tooltip" id="tooltip-data-storage" role="tooltip" aria-live="polite" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1" class="absolute z-10 w-64 px-3 py-2 text-sm font-medium text-white bg-gray-800 rounded-lg shadow-sm -mt-10 left-1/2 -translate-x-1/2" x-cloak>
+                                        Amount of data you can store on our secure cloud servers.
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center text-gray-700 text-lg">10 GB</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center text-gray-700 text-lg">100 GB</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center text-gray-700 text-lg">1 TB</td>
+                        </tr>
+
+                        <!-- Feature Row 3 -->
+                        <tr x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false" :class="{ 'bg-blue-50': hover, 'transition-colors duration-200': true }">
+                            <td class="px-6 py-4 whitespace-nowrap text-lg font-medium text-gray-900 flex items-center">
+                                User Accounts
+                                <div x-data="{ tooltip: false }" class="relative ml-2">
+                                    <button type="button" class="h-5 w-5 text-gray-400 cursor-pointer"
+                                            @mouseenter="tooltip = true" @mouseleave="tooltip = false"
+                                            @focus="tooltip = true" @blur="tooltip = false"
+                                            :aria-expanded="tooltip ? 'true' : 'false'" aria-controls="tooltip-user-accounts"
+                                            aria-label="More information about User Accounts">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    </button>
+                                    <div x-show="tooltip" id="tooltip-user-accounts" role="tooltip" aria-live="polite" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1" class="absolute z-10 w-64 px-3 py-2 text-sm font-medium text-white bg-gray-800 rounded-lg shadow-sm -mt-10 left-1/2 -translate-x-1/2" x-cloak>
+                                        Number of active user accounts allowed within your organization.
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center text-gray-700 text-lg">5</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center text-gray-700 text-lg">50</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center text-gray-700 text-lg">Unlimited</td>
+                        </tr>
+
+                        <!-- Feature Row 4 -->
+                        <tr x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false" :class="{ 'bg-blue-50': hover, 'transition-colors duration-200': true }">
+                            <td class="px-6 py-4 whitespace-nowrap text-lg font-medium text-gray-900 flex items-center">
+                                Email Support
+                                <div x-data="{ tooltip: false }" class="relative ml-2">
+                                    <button type="button" class="h-5 w-5 text-gray-400 cursor-pointer"
+                                            @mouseenter="tooltip = true" @mouseleave="tooltip = false"
+                                            @focus="tooltip = true" @blur="tooltip = false"
+                                            :aria-expanded="tooltip ? 'true' : 'false'" aria-controls="tooltip-email-support"
+                                            aria-label="More information about Email Support">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    </button>
+                                    <div x-show="tooltip" id="tooltip-email-support" role="tooltip" aria-live="polite" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1" class="absolute z-10 w-64 px-3 py-2 text-sm font-medium text-white bg-gray-800 rounded-lg shadow-sm -mt-10 left-1/2 -translate-x-1/2" x-cloak>
+                                        Access to our customer support team via email.
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center text-green-500 text-lg">
+                                <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center text-green-500 text-lg">
+                                <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center text-green-500 text-lg">
+                                <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </td>
+                        </tr>
+
+                        <!-- Feature Row 5 -->
+                        <tr x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false" :class="{ 'bg-blue-50': hover, 'transition-colors duration-200': true }">
+                            <td class="px-6 py-4 whitespace-nowrap text-lg font-medium text-gray-900 flex items-center">
+                                Phone Support
+                                <div x-data="{ tooltip: false }" class="relative ml-2">
+                                    <button type="button" class="h-5 w-5 text-gray-400 cursor-pointer"
+                                            @mouseenter="tooltip = true" @mouseleave="tooltip = false"
+                                            @focus="tooltip = true" @blur="tooltip = false"
+                                            :aria-expanded="tooltip ? 'true' : 'false'" aria-controls="tooltip-phone-support"
+                                            aria-label="More information about Phone Support">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    </button>
+                                    <div x-show="tooltip" id="tooltip-phone-support" role="tooltip" aria-live="polite" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1" class="absolute z-10 w-64 px-3 py-2 text-sm font-medium text-white bg-gray-800 rounded-lg shadow-sm -mt-10 left-1/2 -translate-x-1/2" x-cloak>
+                                        Direct phone access to our support team for immediate assistance.
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center text-red-500 text-lg">
+                                <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center text-green-500 text-lg">
+                                <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center text-green-500 text-lg">
+                                <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </td>
+                        </tr>
+
+                        <!-- Feature Row 6 -->
+                        <tr x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false" :class="{ 'bg-blue-50': hover, 'transition-colors duration-200': true }">
+                            <td class="px-6 py-4 whitespace-nowrap text-lg font-medium text-gray-900 flex items-center">
+                                Custom Integrations
+                                <div x-data="{ tooltip: false }" class="relative ml-2">
+                                    <button type="button" class="h-5 w-5 text-gray-400 cursor-pointer"
+                                            @mouseenter="tooltip = true" @mouseleave="tooltip = false"
+                                            @focus="tooltip = true" @blur="tooltip = false"
+                                            :aria-expanded="tooltip ? 'true' : 'false'" aria-controls="tooltip-custom-integrations"
+                                            aria-label="More information about Custom Integrations">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    </button>
+                                    <div x-show="tooltip" id="tooltip-custom-integrations" role="tooltip" aria-live="polite" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1" class="absolute z-10 w-64 px-3 py-2 text-sm font-medium text-white bg-gray-800 rounded-lg shadow-sm -mt-10 left-1/2 -translate-x-1/2" x-cloak>
+                                        Ability to integrate with third-party applications and custom APIs.
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center text-red-500 text-lg">
+                                <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center text-green-500 text-lg">
+                                <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center text-green-500 text-lg">
+                                <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
