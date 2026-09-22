@@ -1,78 +1,96 @@
 # Nexora Free SaaS Pricing Kit
 
-A free collection of polished SaaS pricing UI components built with HTML and Tailwind CSS.
+> **Build better SaaS pricing experiences without starting from scratch.**
 
-Build pricing experiences faster without starting from scratch.
+**Nexora Free SaaS Pricing Kit** is a free collection of practical SaaS pricing UI components built with **HTML and Tailwind CSS**.
 
-## 🚀 Components Included
+Explore, customize, and integrate modern pricing experiences into your own SaaS projects.
 
-- **Gamified Pricing Grid** — An engaging pricing grid for interactive plan selection.
-- **Interactive Feature Comparison Matrix** — A dynamic matrix for comparing features across different plans.
-- **Usage-Based Slider Pricing Calculator** — A flexible calculator for usage-based pricing models.
+**Nexora is a product brand by Growth Finetouch.**
 
-## 👀 Preview
+---
 
-### Full Preview
+## 🚀 Explore the Free Kit
+
+### 🌐 [Open the Live Demo →](https://growthfinetouch-afk.github.io/Nexora-free-saas-pricing-kit/)
+
+Explore the components directly in your browser.
+
+**Free to explore • No signup required**
+
+---
+
+## ✨ What's Included
+
+The free kit includes **3 practical SaaS pricing components** designed for modern product experiences.
+
+### 💳 Gamified Pricing Grid
+
+An engaging pricing experience designed to make plan selection clearer and more interactive.
+
+**[→ Try the Pricing Grid](gamified_pricing_grid.html)**
+
+---
+
+### 📊 Interactive Feature Comparison Matrix
+
+A structured comparison experience that helps users understand the differences between SaaS pricing plans.
+
+**[→ Try the Feature Comparison](interactive_feature_comparison_matrix.html)**
+
+---
+
+### 🎚️ Usage-Based Slider Pricing Calculator
+
+An interactive calculator designed for SaaS products using usage-based or variable pricing models.
+
+**[→ Try the Usage Calculator](usage_based_slider_pricing_calculator.html)**
+
+---
+
+# 👀 Preview
+
+## Full Preview
 
 ![Nexora Free SaaS Pricing Kit](screenshots/Preview.png)
 
+---
 
-
-### Pricing Grid
+## 💳 Pricing Grid
 
 ![Nexora Pricing Grid](screenshots/pricing-grid.png)
 
-### Feature Comparison Matrix
+Create a modern pricing experience that helps users compare plans and make decisions more easily.
+
+**[→ Open Pricing Grid](gamified_pricing_grid.html)**
+
+---
+
+## 📊 Feature Comparison Matrix
 
 ![Nexora Feature Comparison](screenshots/feature-comparison.png)
 
-### Usage-Based Pricing Calculator
+Make complex SaaS plan differences easier to understand with an interactive comparison experience.
+
+**[→ Open Feature Comparison](interactive_feature_comparison_matrix.html)**
+
+---
+
+## 🎚️ Usage-Based Pricing Calculator
 
 ![Nexora Usage Calculator](screenshots/usage-calculator.png)
 
+Give users a simple way to understand how pricing changes based on usage.
 
+**[→ Open Usage Calculator](usage_based_slider_pricing_calculator.html)**
 
-## 🛠️ How to Use
+---
 
-1. **Clone this repository** or download the files.
-2. **Explore the components** inside the `components/` directory.
-3. **View the gallery** by opening `index.html` in your browser.
-4. **Customize** the HTML, content, pricing, and styling.
-5. **Integrate** the components into your existing project.
+# 🛠️ How to Use
 
-## ⚙️ Built With
+Getting started is simple.
 
-- HTML
-- Tailwind CSS
-- JavaScript where required
+### 1. Clone the repository
 
-## 🌐 Live Demo
-
-Open `index.html` locally to explore the components.
-
-## 🚀 Want the Complete Nexora Vault?
-
-This free kit contains 3 useful SaaS pricing components.
-
-The full **Nexora Pricing & Checkout Vault** includes:
-
-- 10 SaaS pricing & checkout UI components
-- 12 AI workflows
-- Pricing templates
-- Checkout templates
-- Implementation guides
-- QA checklists
-- Component explorer
-- Commercial license
-
-### Get the Complete Vault
-
-**[👉 Get the Nexora Pricing & Checkout Vault on Gumroad](https://growthfinetouch.gumroad.com/l/nexora-pricing-vault)**
-
-## 📄 License
-
-See [LICENSE.md](LICENSE.md) for the license terms.
-
-## About Nexora
-
-Nexora creates practical UI systems and developer resources for building SaaS products faster.
+```bash
+git clone https://github.com/growthfinetouch-afk/Nexora-free-saas-pricing-kit.git
