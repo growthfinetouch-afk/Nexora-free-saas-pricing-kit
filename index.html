@@ -3,46 +3,642 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexora Pricing Kit Gallery</title>
+
+    <title>Nexora Free SaaS Pricing Kit — Build Better Pricing Experiences</title>
+
+    <meta name="description"
+        content="Explore the free Nexora SaaS Pricing Kit — interactive pricing grids, feature comparison matrices, and usage-based pricing calculators for modern SaaS products.">
+
+    <meta name="theme-color" content="#0f172a">
+
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #4f46e5, #7c3aed, #2563eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-glow {
+            box-shadow:
+                0 0 80px rgba(79, 70, 229, 0.12),
+                0 0 160px rgba(124, 58, 237, 0.08);
+        }
+
+        .card-hover {
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 25px 50px rgba(15, 23, 42, 0.12);
+        }
+
+        .cta-hover {
+            transition: all 0.25s ease;
+        }
+
+        .cta-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(79, 70, 229, 0.30);
+        }
+    </style>
 </head>
-<body class="bg-gray-100 font-sans antialiased">
-    <div class="container mx-auto p-8">
-        <h1 class="text-5xl font-extrabold text-center text-gray-900 mb-12">Nexora Pricing Kit Gallery</h1>
 
-        <!-- Components Section -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                <div class="p-6">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Gamified Pricing Grid</h2>
-                    <p class="text-gray-600 mb-6">Explore an engaging and interactive pricing grid design that makes choosing a plan fun.</p>
-                    <a href="components/gamified_pricing_grid.html" class="block w-full text-center bg-indigo-600 text-white py-3 px-4 rounded-lg hover:bg-indigo-700 transition-colors duration-300">View Component</a>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-xl">
+
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+            <div class="h-16 flex items-center justify-between">
+
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2">
+
+                    <div class="w-9 h-9 rounded-xl bg-slate-900 text-white flex items-center justify-center font-black text-sm">
+                        N
+                    </div>
+
+                    <span class="font-bold text-xl tracking-tight">
+                        Nexora
+                    </span>
+
+                </a>
+
+                <!-- Navigation -->
+                <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+
+                    <a href="#components" class="hover:text-slate-900 transition">
+                        Free Components
+                    </a>
+
+                    <a href="#why-nexora" class="hover:text-slate-900 transition">
+                        Why Nexora
+                    </a>
+
+                    <a href="#vault" class="hover:text-slate-900 transition">
+                        Full Vault
+                    </a>
+
                 </div>
+
+                <!-- CTA -->
+                <a href="https://growthfinetouch.gumroad.com/l/nexora-pricing-vault"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="hidden sm:inline-flex items-center justify-center bg-slate-900 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-slate-800 transition">
+
+                    Get Full Vault →
+                </a>
+
             </div>
 
-            <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                <div class="p-6">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Interactive Feature Comparison Matrix</h2>
-                    <p class="text-gray-600 mb-6">Compare features across different plans with a dynamic and easy-to-use matrix.</p>
-                    <a href="components/interactive_feature_comparison_matrix.html" class="block w-full text-center bg-indigo-600 text-white py-3 px-4 rounded-lg hover:bg-indigo-700 transition-colors duration-300">View Component</a>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                <div class="p-6">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Usage-Based Slider Pricing Calculator</h2>
-                    <p class="text-gray-600 mb-6">A flexible pricing calculator that adjusts based on user input for usage-based models.</p>
-                    <a href="components/usage_based_slider_pricing_calculator.html" class="block w-full text-center bg-indigo-600 text-white py-3 px-4 rounded-lg hover:bg-indigo-700 transition-colors duration-300">View Component</a>
-                </div>
-            </div>
         </div>
 
-        <!-- Upsell Card -->
-        <div class="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl shadow-xl p-8 text-center text-white">
-            <h2 class="text-4xl font-bold mb-4">Unlock More with the Full Kit!</h2>
-            <p class="text-lg mb-8">Ready to supercharge your SaaS pricing pages? Get access to even more components, advanced features, and dedicated support with the complete Nexora Pricing Kit.</p>
-            <a href="https://gumroad.com/l/your-product-link" target="_blank" class="inline-block bg-white text-indigo-700 font-bold py-4 px-8 rounded-full text-xl hover:bg-indigo-100 transition-colors duration-300 transform hover:scale-105">Get the Full Kit on Gumroad</a>
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="relative overflow-hidden">
+
+        <div class="absolute inset-0 pointer-events-none">
+
+            <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-indigo-200/30 blur-3xl rounded-full"></div>
+
         </div>
-    </div>
+
+
+        <div class="relative max-w-6xl mx-auto px-5 sm:px-8 pt-20 pb-20 md:pt-28 md:pb-28 text-center">
+
+            <!-- Small badge -->
+
+            <div class="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full px-4 py-2 text-sm font-medium text-slate-600 shadow-sm mb-8">
+
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+
+                Free SaaS UI Resource
+
+            </div>
+
+
+            <!-- Main heading -->
+
+            <h1 class="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight leading-[1.02] max-w-5xl mx-auto">
+
+                Build pricing pages
+                <span class="gradient-text">
+                    people actually understand.
+                </span>
+
+            </h1>
+
+
+            <!-- Description -->
+
+            <p class="mt-7 text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+
+                Explore a free collection of practical SaaS pricing components designed to help you create clearer, more engaging and conversion-focused pricing experiences.
+
+            </p>
+
+
+            <!-- Hero CTA -->
+
+            <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
+
+                <a href="#components"
+                   class="cta-hover inline-flex items-center justify-center bg-indigo-600 text-white px-7 py-4 rounded-xl font-bold text-base shadow-lg shadow-indigo-600/20">
+
+                    Explore Free Components ↓
+
+                </a>
+
+
+                <a href="https://growthfinetouch.gumroad.com/l/nexora-pricing-vault"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center justify-center bg-white border border-slate-200 text-slate-800 px-7 py-4 rounded-xl font-bold text-base hover:border-slate-300 hover:bg-slate-50 transition">
+
+                    See Full Vault →
+
+                </a>
+
+            </div>
+
+
+            <!-- Trust line -->
+
+            <p class="mt-5 text-sm text-slate-500">
+                Free to explore • No signup required
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         COMPONENTS
+    ========================== -->
+
+    <section id="components" class="py-20 md:py-28 bg-white">
+
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+
+            <!-- Section heading -->
+
+            <div class="max-w-2xl mx-auto text-center mb-14">
+
+                <p class="text-sm font-bold uppercase tracking-widest text-indigo-600 mb-3">
+                    Start here
+                </p>
+
+                <h2 class="text-4xl md:text-5xl font-black tracking-tight">
+                    Explore the free kit.
+                </h2>
+
+                <p class="mt-5 text-lg text-slate-600">
+                    Try the components directly in your browser before deciding whether the complete vault is right for your project.
+                </p>
+
+            </div>
+
+
+
+            <!-- Cards -->
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
+
+
+                <!-- Card 1 -->
+
+                <article class="card-hover bg-slate-50 border border-slate-200 rounded-3xl overflow-hidden">
+
+                    <div class="p-7">
+
+                        <div class="w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center mb-6">
+
+                            <span class="text-xl font-black">
+                                $
+                            </span>
+
+                        </div>
+
+                        <h3 class="text-2xl font-bold tracking-tight">
+                            Gamified Pricing Grid
+                        </h3>
+
+                        <p class="mt-4 text-slate-600 leading-relaxed">
+                            Create a more engaging pricing selection experience with a modern SaaS pricing grid.
+                        </p>
+
+                        <a href="gamified_pricing_grid.html"
+                           class="mt-7 inline-flex items-center font-bold text-indigo-600 hover:text-indigo-800 transition">
+
+                            Try Component
+                            <span class="ml-2">→</span>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Card 2 -->
+
+                <article class="card-hover bg-slate-50 border border-slate-200 rounded-3xl overflow-hidden">
+
+                    <div class="p-7">
+
+                        <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center mb-6">
+
+                            <span class="text-xl font-black">
+                                ✓
+                            </span>
+
+                        </div>
+
+                        <h3 class="text-2xl font-bold tracking-tight">
+                            Feature Comparison Matrix
+                        </h3>
+
+                        <p class="mt-4 text-slate-600 leading-relaxed">
+                            Make complex plan differences easier to understand with an interactive comparison experience.
+                        </p>
+
+                        <a href="interactive_feature_comparison_matrix.html"
+                           class="mt-7 inline-flex items-center font-bold text-indigo-600 hover:text-indigo-800 transition">
+
+                            Try Component
+                            <span class="ml-2">→</span>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Card 3 -->
+
+                <article class="card-hover bg-slate-50 border border-slate-200 rounded-3xl overflow-hidden">
+
+                    <div class="p-7">
+
+                        <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
+
+                            <span class="text-xl font-black">
+                                ↗
+                            </span>
+
+                        </div>
+
+                        <h3 class="text-2xl font-bold tracking-tight">
+                            Usage-Based Calculator
+                        </h3>
+
+                        <p class="mt-4 text-slate-600 leading-relaxed">
+                            Let users understand usage-based pricing through a simple interactive calculator.
+                        </p>
+
+                        <a href="usage_based_slider_pricing_calculator.html"
+                           class="mt-7 inline-flex items-center font-bold text-indigo-600 hover:text-indigo-800 transition">
+
+                            Try Component
+                            <span class="ml-2">→</span>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         WHY NEXORA
+    ========================== -->
+
+    <section id="why-nexora" class="py-20 md:py-28 bg-slate-950 text-white">
+
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+
+                <!-- Left -->
+
+                <div>
+
+                    <p class="text-sm font-bold uppercase tracking-widest text-indigo-400 mb-4">
+                        Built for SaaS builders
+                    </p>
+
+                    <h2 class="text-4xl md:text-5xl font-black tracking-tight leading-tight">
+
+                        Not just screens.
+                        <br>
+
+                        <span class="text-slate-400">
+                            Practical product systems.
+                        </span>
+
+                    </h2>
+
+                    <p class="mt-6 text-lg text-slate-400 leading-relaxed max-w-xl">
+
+                        Nexora is built around practical UI and product systems that help designers, developers and SaaS teams move from idea to implementation faster.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- Right -->
+
+                <div class="grid sm:grid-cols-2 gap-5">
+
+
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+
+                        <div class="text-2xl mb-4">
+                            ⚡
+                        </div>
+
+                        <h3 class="font-bold text-lg">
+                            Faster workflows
+                        </h3>
+
+                        <p class="mt-2 text-sm text-slate-400 leading-relaxed">
+                            Start with practical components instead of designing everything from zero.
+                        </p>
+
+                    </div>
+
+
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+
+                        <div class="text-2xl mb-4">
+                            🧩
+                        </div>
+
+                        <h3 class="font-bold text-lg">
+                            Reusable systems
+                        </h3>
+
+                        <p class="mt-2 text-sm text-slate-400 leading-relaxed">
+                            Build experiences that can be adapted across modern SaaS products.
+                        </p>
+
+                    </div>
+
+
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+
+                        <div class="text-2xl mb-4">
+                            🎯
+                        </div>
+
+                        <h3 class="font-bold text-lg">
+                            Product focused
+                        </h3>
+
+                        <p class="mt-2 text-sm text-slate-400 leading-relaxed">
+                            Designed around real product flows rather than isolated visual concepts.
+                        </p>
+
+                    </div>
+
+
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+
+                        <div class="text-2xl mb-4">
+                            🚀
+                        </div>
+
+                        <h3 class="font-bold text-lg">
+                            Ready to explore
+                        </h3>
+
+                        <p class="mt-2 text-sm text-slate-400 leading-relaxed">
+                            Explore the free components first, then decide if the full vault fits your workflow.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FULL VAULT CTA
+    ========================== -->
+
+    <section id="vault" class="py-24 bg-white">
+
+        <div class="max-w-5xl mx-auto px-5 sm:px-8">
+
+            <div class="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 text-white p-8 md:p-14 text-center hero-glow">
+
+
+                <!-- Decorative circles -->
+
+                <div class="absolute -top-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-2xl"></div>
+
+                <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-white/10 rounded-full blur-2xl"></div>
+
+
+                <div class="relative">
+
+                    <div class="inline-flex items-center bg-white/15 border border-white/20 rounded-full px-4 py-2 text-sm font-semibold mb-6">
+
+                        Complete Nexora Product
+
+                    </div>
+
+
+                    <h2 class="text-4xl md:text-5xl font-black tracking-tight">
+                        Ready to go beyond the free kit?
+                    </h2>
+
+
+                    <p class="mt-5 text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
+
+                        Get the complete Nexora Pricing & Checkout Vault with additional UI systems, workflows and resources built for SaaS product teams.
+
+                    </p>
+
+
+
+                    <!-- PRICE -->
+
+                    <div class="mt-8 flex items-center justify-center gap-4">
+
+                        <span class="text-xl md:text-2xl text-white/60 line-through">
+                            $49
+                        </span>
+
+                        <span class="text-5xl md:text-6xl font-black">
+                            $29
+                        </span>
+
+                    </div>
+
+
+                    <p class="mt-2 text-sm font-medium text-white/80">
+                        Launch price
+                    </p>
+
+
+
+                    <!-- CTA -->
+
+                    <div class="mt-8">
+
+                        <a href="https://growthfinetouch.gumroad.com/l/nexora-pricing-vault"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="cta-hover inline-flex items-center justify-center bg-white text-indigo-700 px-8 py-4 rounded-xl font-black text-lg shadow-xl">
+
+                            Get the Full Pricing & Checkout Vault →
+
+                        </a>
+
+                    </div>
+
+
+                    <p class="mt-5 text-sm text-white/70">
+                        Secure checkout via Gumroad
+                    </p>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FINAL MICRO CTA
+    ========================== -->
+
+    <section class="py-16 bg-slate-50 border-t border-slate-200">
+
+        <div class="max-w-3xl mx-auto px-5 text-center">
+
+            <h2 class="text-3xl md:text-4xl font-black tracking-tight">
+                Start with something free.
+            </h2>
+
+            <p class="mt-4 text-slate-600 text-lg">
+                Explore the components, test the interactions and see how Nexora can fit into your next SaaS project.
+            </p>
+
+            <a href="#components"
+               class="mt-7 inline-flex items-center font-bold text-indigo-600 hover:text-indigo-800">
+
+                Explore the Free Kit
+                <span class="ml-2">↑</span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="bg-slate-950 text-slate-400">
+
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 py-10">
+
+            <div class="flex flex-col md:flex-row items-center justify-between gap-5">
+
+                <div class="flex items-center gap-2">
+
+                    <div class="w-8 h-8 rounded-lg bg-white text-slate-950 flex items-center justify-center font-black text-sm">
+                        N
+                    </div>
+
+                    <span class="font-bold text-white">
+                        Nexora
+                    </span>
+
+                </div>
+
+
+                <p class="text-sm text-center">
+                    Practical UI systems for modern SaaS products.
+                </p>
+
+
+                <a href="https://growthfinetouch.gumroad.com/l/nexora-pricing-vault"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="text-sm font-semibold text-white hover:text-indigo-400 transition">
+
+                    Full Vault →
+                    
+                </a>
+
+            </div>
+
+
+            <div class="border-t border-white/10 mt-8 pt-6 text-center text-xs">
+
+                © 2026 Nexora. All rights reserved.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
 </body>
 </html>
