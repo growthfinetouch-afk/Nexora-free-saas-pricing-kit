@@ -12,6 +12,12 @@ Build pricing experiences faster without starting from scratch.
 
 ## 👀 Preview
 
+### Full Preview
+
+![Nexora Free SaaS Pricing Kit](screenshots/Preview.png)
+
+
+
 ### Pricing Grid
 
 ![Nexora Pricing Grid](screenshots/pricing-grid.png)
@@ -24,9 +30,7 @@ Build pricing experiences faster without starting from scratch.
 
 ![Nexora Usage Calculator](screenshots/usage-calculator.png)
 
-### Full Preview
 
-![Nexora Free SaaS Pricing Kit](screenshots/Preview.png)
 
 ## 🛠️ How to Use
 
